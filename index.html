@@ -382,7 +382,6 @@ transition: transform 300ms var(--ease-out), opacity 200ms ease;
 </nav>
 <div class="top__actions">
 <button class="join top__join" type="button" data-open-join>Sign up for early access</button>
-<a class="ghost" href="#join" data-signin>Sign in</a>
 </div>
 </div>
 <nav class="chips" aria-label="Sections">
@@ -560,7 +559,6 @@ $("#earlyRow").hidden = true;
 $("#earlyDone").hidden = false;
 $("#previewNote").hidden = !!WAITLIST_ENDPOINT;
 });
-if (SIGNUP_ENDPOINT) $("[data-signin]").href = "/login";
 const top = $("#top"), thumb = $("#thumbbar");
 addEventListener("scroll", () => top.classList.toggle("is-scrolled", scrollY > 8), { passive: true });
 if ("IntersectionObserver" in window) {
