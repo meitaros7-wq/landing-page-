@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <!-- Google tag (Google Analytics) -->
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PMDFW2C8"></script>
@@ -9,6 +9,7 @@
   gtag('js', new Date());
 </script>
 <meta charset="utf-8">
+<script>document.documentElement.className = "js";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>How to Track Your BJJ Progress: Journal, Footage and Patterns | Matsense</title>
 <meta name="description" content="Not sure if you are improving at BJJ? How to track your progress with a short training journal, regular footage of your rolls, and the patterns across your matches.">
@@ -25,8 +26,9 @@
 <link rel="apple-touch-icon" href="/icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Instrument+Sans:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/article.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="/assets/guide.css">
+<script src="/assets/guide.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -97,85 +99,138 @@
 </script>
 </head>
 <body>
-<header class="wrap top__row">
+<div class="progress" aria-hidden="true"><i></i></div>
+<header class="top"><div class="wrap top__row">
 <a class="brand" href="/" aria-label="Matsense home"><svg width="34" height="34" viewBox="0 0 60 60" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6H10C7.8 6 6 7.8 6 10V20M40 6H50C52.2 6 54 7.8 54 10V20M6 40V50C6 52.2 7.8 54 10 54H20M54 40V50C54 52.2 52.2 54 50 54H40" stroke="currentColor" stroke-width="4"/><path d="M30 19A11 11 0 0 0 19 30" stroke="currentColor" stroke-width="3.5"/><path d="M30 41A11 11 0 0 0 41 30" stroke="var(--mark)" stroke-width="3.5"/><circle cx="30" cy="30" r="4" fill="var(--mark)"/></svg><span class="brand__name">Matsense</span></a>
-<a class="cta" href="/#join">Sign up for early access</a>
-</header>
-<main>
+<a class="join" href="/#join">Sign up<span class="long">&nbsp;for early access</span></a>
+</div></header>
+<main class="guide">
+<nav class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ol>
+<li><a href="#why-hard"><span>01</span>Why it is hard</a></li>
+<li><a href="#journal"><span>02</span>Journal</a></li>
+<li><a href="#film"><span>03</span>Film</a></li>
+<li><a href="#patterns"><span>04</span>Patterns</a></li>
+<li><a href="#one-thing"><span>05</span>One thing</a></li>
+<li><a href="#monthly"><span>06</span>Monthly review</a></li>
+<li><a href="#signs"><span>07</span>Signs</a></li>
+<li><a href="#questions"><span>08</span>Questions</a></li>
+</ol></nav>
 <article>
 <p class="crumbs"><a href="/">Matsense</a> / Tracking your BJJ progress</p>
 <h1>How to track your BJJ progress</h1>
+<div class="meta"><span class="pill"><b>3</b> min read</span><span class="pill"><b>8</b> sections</span></div>
+<div class="answer">
+<span class="label">The short answer</span>
 <p class="lead">Progress in BJJ is hard to feel from day to day, because your training partners improve with you. To see it, track three things: a short training journal after each session, footage of your rolls and matches over time, and the patterns across them, especially the almosts that keep coming back. When the same almost starts to finish, that is progress you can see.</p>
 <p class="byline">By the Matsense team, built and tested by IBJJF world champions</p>
+</div>
 
+<section class="sec" id="why-hard" data-short="Why it is hard">
 <h2>Why progress is hard to see</h2>
-<ul>
-<li><strong>Your partners improve too.</strong> The rounds feel just as hard, even when you are better.</li>
-<li><strong>You roll with tougher people.</strong> As you improve, you choose harder rounds.</li>
-<li><strong>Belts and stripes are slow.</strong> They come months or years apart, and say little about what changed this month.</li>
+<ul class="cards cards--3">
+<li class="rv"><strong>Your partners improve too.</strong> The rounds feel just as hard, even when you are better.</li>
+<li class="rv"><strong>You roll with tougher people.</strong> As you improve, you choose harder rounds.</li>
+<li class="rv"><strong>Belts and stripes are slow.</strong> They come months or years apart, and say little about what changed this month.</li>
 </ul>
+</section>
 
+<section class="sec" id="journal" data-short="Journal">
 <h2>Keep a short training journal</h2>
 <p>Write three to five lines after each session, while you still remember. Short notes you actually write are worth more than long notes you skip.</p>
+<div class="journal rv">
+<div class="journal__top"><span class="journal__title">Training journal</span><span class="journal__date"></span></div>
 <ul>
 <li><strong>What was taught,</strong> in one line.</li>
 <li><strong>What worked in rolling.</strong></li>
 <li><strong>One problem that came up,</strong> and in which position.</li>
 <li><strong>One question for your coach.</strong></li>
 </ul>
+<button class="copy" type="button">Copy as a note</button>
+</div>
+</section>
 
+<section class="sec" id="film" data-short="Film">
 <h2>Film regularly and compare</h2>
-<p>Film a few rounds every few weeks, and keep them by date. Every few months, watch an old round next to a new one, ideally from the same position or against a similar partner. Read how in <a href="/how-to-film-bjj-rolls/">How to film your BJJ rolls</a>.</p>
+<div class="note note--calm rv"><p>Film a few rounds every few weeks, and keep them by date. Every few months, watch an old round next to a new one, ideally from the same position or against a similar partner. Read how in <a href="/how-to-film-bjj-rolls/">How to film your BJJ rolls</a>.</p></div>
+</section>
 
+<section class="sec" id="patterns" data-short="Patterns">
 <h2>Track the patterns, not every detail</h2>
 <p>The most useful thing to track is what repeats:</p>
-<ul>
-<li><strong>The same almost across matches.</strong> The sweep that keeps almost working, or the pass you keep almost stopping.</li>
-<li><strong>The positions where you get stuck.</strong></li>
-<li><strong>Where you score,</strong> and from which positions.</li>
+<ul class="cards cards--3">
+<li class="rv"><strong>The same almost across matches.</strong> The sweep that keeps almost working, or the pass you keep almost stopping.</li>
+<li class="rv"><strong>The positions where you get stuck.</strong></li>
+<li class="rv"><strong>Where you score,</strong> and from which positions.</li>
 </ul>
 <p>You are looking for direction, not exact numbers: is the same problem showing up less often than it did two months ago?</p>
+</section>
 
+<section class="sec" id="one-thing" data-short="One thing">
 <h2>Work on one thing at a time</h2>
-<p>Turn the biggest pattern into one task, drill it from the exact position, and test it in positional sparring and in live rounds. When it starts to work, move to the next one. Read more in <a href="/how-to-analyze-bjj-matches/">How to analyze a BJJ match</a>.</p>
+<div class="note rv"><p>Turn the biggest pattern into one task, drill it from the exact position, and test it in positional sparring and in live rounds. When it starts to work, move to the next one. Read more in <a href="/how-to-analyze-bjj-matches/">How to analyze a BJJ match</a>.</p></div>
+</section>
 
+<section class="sec" id="monthly" data-short="Monthly review">
 <h2>Review once a month</h2>
-<ol>
-<li><strong>Read your journal</strong> for the month.</li>
-<li><strong>Rewatch a few rounds</strong> or a match.</li>
-<li><strong>Ask:</strong> which problem got smaller, and which one is still here?</li>
-<li><strong>Pick the focus</strong> for next month.</li>
+<div class="tool rv" data-check="month">
+<div class="tool__head"><span class="label">This month&#x27;s review</span><span class="count"><b>0</b>/4</span></div>
+<div class="meter" aria-hidden="true"><i></i></div>
+<ol class="check">
+<li><label class="tick"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Read your journal</strong> for the month.</span></label></li>
+<li><label class="tick"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Rewatch a few rounds</strong> or a match.</span></label></li>
+<li><label class="tick"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Ask:</strong> which problem got smaller, and which one is still here?</span></label></li>
+<li><label class="tick"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Pick the focus</strong> for next month.</span></label></li>
 </ol>
+<div class="tool__head" style="margin:12px 0 0;justify-content:flex-end"><button class="reset" type="button">Clear</button></div>
+</div>
+</section>
 
+<section class="sec" id="signs" data-short="Signs">
 <h2>Signs you are improving</h2>
-<ul>
-<li>You survive longer in bad positions, and escape more of them.</li>
-<li>An almost that used to slip away now finishes.</li>
-<li>Your partners start defending the thing you do well.</li>
-<li>You notice your mistakes during the round, not only after it.</li>
-<li>You are calmer in hard rounds and in competition.</li>
+<div class="tool rv" data-check="signs">
+<div class="tool__head"><span class="label">Which ones do you notice?</span><span class="count"><b>0</b>/5</span></div>
+<div class="meter" aria-hidden="true"><i></i></div>
+<ul class="check">
+<li><label class="tick"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>You survive longer in bad positions, and escape more of them.</span></label></li>
+<li><label class="tick"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>An almost that used to slip away now finishes.</span></label></li>
+<li><label class="tick"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Your partners start defending the thing you do well.</span></label></li>
+<li><label class="tick"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>You notice your mistakes during the round, not only after it.</span></label></li>
+<li><label class="tick"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>You are calmer in hard rounds and in competition.</span></label></li>
 </ul>
+<div class="tool__head" style="margin:12px 0 0;justify-content:flex-end"><button class="reset" type="button">Clear</button></div>
+</div>
+<div class="app rv">
 <p>In Matsense, every match you analyze adds to your library. You keep notes, turn insights into tasks, and sort them into folders that collect moments from different matches, so you can see the same pattern across them. Your weekly training plan comes with a streak and a countdown to your next competition.</p>
+<div class="app__screen" aria-hidden="true">
+<span class="app__title">Key moments</span>
+<div class="mo"><time>0:48</time><i style="--c:var(--ev-sweepatt)"></i>Sweep attempt<span>You</span></div>
+<div class="mo is-on"><time>2:15</time><i style="--c:var(--ev-guardpass)"></i>Guard pass<span>Opponent</span></div>
+<div class="mo"><time>3:40</time><i style="--c:var(--ev-subatt)"></i>Submission attempt<span>You</span></div>
+<div class="task">Task: keep the knee shield frame</div>
+</div>
+</div>
+</section>
 
+<section class="sec" id="questions" data-short="Questions">
 <h2>Questions people ask</h2>
-<h3>How do I know if I am improving at BJJ?</h3>
-<p>Compare footage of your rolls from a few months apart, and check whether the problems you wrote down in your journal show up less often. Surviving longer in bad positions and finishing an almost that used to slip away are clear signs.</p>
-<h3>What should I write in a BJJ training journal?</h3>
-<p>Keep it short: what was taught, what worked in rolling, one problem that came up and in which position, and one question for your coach.</p>
-<h3>How often should I film my BJJ rolls?</h3>
-<p>A few rounds every few weeks is enough to see changes over time. Keep the footage by date so you can compare old and new rounds.</p>
+<div class="faq">
+<details><summary><h3>How do I know if I am improving at BJJ?</h3></summary><p>Compare footage of your rolls from a few months apart, and check whether the problems you wrote down in your journal show up less often. Surviving longer in bad positions and finishing an almost that used to slip away are clear signs.</p></details>
+<details><summary><h3>What should I write in a BJJ training journal?</h3></summary><p>Keep it short: what was taught, what worked in rolling, one problem that came up and in which position, and one question for your coach.</p></details>
+<details><summary><h3>How often should I film my BJJ rolls?</h3></summary><p>A few rounds every few weeks is enough to see changes over time. Keep the footage by date so you can compare old and new rounds.</p></details>
+</div>
+</section>
 
-</article>
-<nav class="related" aria-label="Keep reading">
-<a href="/how-to-film-bjj-rolls/">How to film your BJJ rolls &rarr;</a>
-<a href="/how-to-analyze-bjj-matches/">How to analyze a BJJ match: the almosts and the moments that decided it &rarr;</a>
+<nav class="related" aria-label="Keep reading"><span class="related__label">Keep reading</span>
+<a href="/how-to-film-bjj-rolls/">How to film your BJJ rolls</a>
+<a href="/how-to-analyze-bjj-matches/">How to analyze a BJJ match: the almosts and the moments that decided it</a>
 </nav>
-<section class="panel">
+</article>
+</main>
+<section class="final"><div class="final__panel">
 <h2>See your progress, match by match.</h2>
 <p>Upload a match, and Matsense marks every moment that mattered.</p>
-<a class="cta" href="/#join">Sign up for early access</a>
-</section>
-</main>
+<a class="join join--big" href="/#join">Sign up for early access</a>
+</div></section>
 <footer class="foot"><span><b>Matsense</b> &middot; AI match analysis for BJJ</span><a href="mailto:office@matsense.net">office@matsense.net</a></footer>
 </body>
 </html>
