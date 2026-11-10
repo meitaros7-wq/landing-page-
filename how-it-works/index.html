@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <!-- Google tag (Google Analytics) -->
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PMDFW2C8"></script>
@@ -9,6 +9,7 @@
   gtag('js', new Date());
 </script>
 <meta charset="utf-8">
+<script>document.documentElement.className = "js";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>How AI BJJ Match Analysis Works | Matsense</title>
 <meta name="description" content="How Matsense analyzes BJJ matches: a rulebook of 35+ event types written by a black belt world champion, timestamped events, a second look at the finish, and learning from expert corrections.">
@@ -25,8 +26,9 @@
 <link rel="apple-touch-icon" href="/icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Instrument+Sans:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/article.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="/assets/guide.css">
+<script src="/assets/guide.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -97,64 +99,99 @@
 </script>
 </head>
 <body>
-<header class="wrap top__row">
+<div class="progress" aria-hidden="true"><i></i></div>
+<header class="top"><div class="wrap top__row">
 <a class="brand" href="/" aria-label="Matsense home"><svg width="34" height="34" viewBox="0 0 60 60" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6H10C7.8 6 6 7.8 6 10V20M40 6H50C52.2 6 54 7.8 54 10V20M6 40V50C6 52.2 7.8 54 10 54H20M54 40V50C54 52.2 52.2 54 50 54H40" stroke="currentColor" stroke-width="4"/><path d="M30 19A11 11 0 0 0 19 30" stroke="currentColor" stroke-width="3.5"/><path d="M30 41A11 11 0 0 0 41 30" stroke="var(--mark)" stroke-width="3.5"/><circle cx="30" cy="30" r="4" fill="var(--mark)"/></svg><span class="brand__name">Matsense</span></a>
-<a class="cta" href="/#join">Sign up for early access</a>
-</header>
-<main>
+<a class="join" href="/#join">Sign up<span class="long">&nbsp;for early access</span></a>
+</div></header>
+<main class="guide">
+<nav class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ol>
+<li><a href="#problem"><span>01</span>The problem</a></li>
+<li><a href="#how"><span>02</span>How it recognizes</a></li>
+<li><a href="#what-you-get"><span>03</span>What you get</a></li>
+<li><a href="#which-matches"><span>04</span>Which matches</a></li>
+<li><a href="#questions"><span>05</span>Questions</a></li>
+</ol></nav>
 <article>
 <p class="crumbs"><a href="/">Matsense</a> / How it works</p>
 <h1>How Matsense analyzes a BJJ match</h1>
+<div class="meta"><span class="pill"><b>4</b> min read</span><span class="pill"><b>5</b> sections</span></div>
+<div class="answer">
+<span class="label">The short answer</span>
 <p class="lead">Upload a match, and Matsense marks every guard pass, sweep, takedown, submission attempt and turning point, so your review starts where the learning is.</p>
 <p class="byline">By the Matsense team, built and tested by IBJJF world champions</p>
+</div>
 
+<section class="sec" id="problem" data-short="The problem">
 <h2>The problem: rewatching instead of learning</h2>
 <p>Every competitor knows the routine. You film the match, sit down to review it, and spend most of the time waiting for something to happen. Your memory of the match is not reliable either: adrenaline makes it subjective, the moments you remember are rarely close to what actually happened, and you miss the ones that decided it.</p>
 <p>We call that first watch the <strong>staring phase</strong>. The real work only starts in the second phase, <strong>critical viewing</strong>: rewinding one exchange, seeing what happened, and finding the hole, the mistake or the missed opportunity.</p>
-<div class="callout"><p><strong>What Matsense does:</strong> it removes the staring phase. You open a match and go straight to the moments that matter, each one marked and explained, and every insight you take from it becomes something to train.</p></div>
+<div class="note rv"><p><strong>What Matsense does:</strong> it removes the staring phase. You open a match and go straight to the moments that matter, each one marked and explained, and every insight you take from it becomes something to train.</p></div>
+</section>
 
+<section class="sec" id="how" data-short="How it recognizes">
 <h2>How Matsense recognizes what happens in a match</h2>
 <p>The analysis is not a generic video model guessing at grappling. It works from a rulebook written by competitors.</p>
-<h3>1. A rulebook written by a black belt world champion</h3>
-<p>Amit Burshtein, black belt, UWW World Champion and IBJJF No-Gi European Champion, wrote precise definitions for every position and transition the engine looks for: <strong>more than 35 event types</strong>, from guard passes, sweeps, takedowns, mount, knee on belly and back takes to submission attempts, near passes, leg lock exchanges, guard pulls, scrambles, resets and penalties.</p>
-<p>The definitions are exact on purpose. A sweep needs a real guard and real height, not just a change of top position. Danger is not a pass. An opening only counts if it actually took hold. These are the same distinctions a referee and a high-level coach make.</p>
-<h3>2. Every moment is marked, typed and attributed</h3>
-<p>A video AI model reads the whole match against that rulebook. Each event comes back with its start and end time, its type, which athlete did it, the score when the referee gave one, and a short description of what happened, so you can jump straight to it.</p>
-<p>The engine follows a clear order of priorities: <strong>first the event, then the athlete, then the score.</strong> Identifying correctly that something happened matters most. That is why it works on imperfect footage too.</p>
-<h3>3. A second, sharper look at how it ended</h3>
-<p>Finishes happen fast. After the full pass, Matsense cuts the end of the match at full resolution and takes a focused second look: how the match ended, and who finished whom. If the two passes disagree, the moment is flagged for review instead of being guessed.</p>
-<h3>4. It learns from champions&rsquo; corrections</h3>
-<p>World-class competitors review analyzed matches and correct what the engine got wrong. Every real correction, across every reviewed match, is carried into future analyses, so the same mistake is not repeated.</p>
+<div class="stages">
+<div class="stage rv"><h3>1. A rulebook written by a black belt world champion</h3><p>Amit Burshtein, black belt, UWW World Champion and IBJJF No-Gi European Champion, wrote precise definitions for every position and transition the engine looks for: <strong>more than 35 event types</strong>, from guard passes, sweeps, takedowns, mount, knee on belly and back takes to submission attempts, near passes, leg lock exchanges, guard pulls, scrambles, resets and penalties.</p><p>The definitions are exact on purpose. A sweep needs a real guard and real height, not just a change of top position. Danger is not a pass. An opening only counts if it actually took hold. These are the same distinctions a referee and a high-level coach make.</p></div>
+<div class="stage rv"><h3>2. Every moment is marked, typed and attributed</h3><p>A video AI model reads the whole match against that rulebook. Each event comes back with its start and end time, its type, which athlete did it, the score when the referee gave one, and a short description of what happened, so you can jump straight to it.</p><p>The engine follows a clear order of priorities: <strong>first the event, then the athlete, then the score.</strong> Identifying correctly that something happened matters most. That is why it works on imperfect footage too.</p></div>
+<div class="stage rv"><h3>3. A second, sharper look at how it ended</h3><p>Finishes happen fast. After the full pass, Matsense cuts the end of the match at full resolution and takes a focused second look: how the match ended, and who finished whom. If the two passes disagree, the moment is flagged for review instead of being guessed.</p></div>
+<div class="stage rv"><h3>4. It learns from champions&rsquo; corrections</h3><p>World-class competitors review analyzed matches and correct what the engine got wrong. Every real correction, across every reviewed match, is carried into future analyses, so the same mistake is not repeated.</p></div>
+</div>
+</section>
 
+<section class="sec" id="what-you-get" data-short="What you get">
 <h2>What you get from it</h2>
-<ul>
-<li><strong>Efficient rewatching.</strong> Every point, attempt and turning moment, marked on the match timeline.</li>
-<li><strong>A fight breakdown from your point of view.</strong> What worked, what to improve, the key turning points, and why you won or lost.</li>
-<li><strong>Insights that become training.</strong> Each conclusion becomes a task you can sort into folders, for example a folder that groups similar moments across matches.</li>
-<li><strong>A plan to follow.</strong> A weekly training plan, a streak, and a countdown to your next competition.</li>
-<li><strong>A coach in the loop.</strong> Connect your own coach, or a pro coach through the app, to review your matches with you.</li>
+<ul class="cards">
+<li class="rv"><strong>Efficient rewatching.</strong> Every point, attempt and turning moment, marked on the match timeline.</li>
+<li class="rv"><strong>A fight breakdown from your point of view.</strong> What worked, what to improve, the key turning points, and why you won or lost.</li>
+<li class="rv"><strong>Insights that become training.</strong> Each conclusion becomes a task you can sort into folders, for example a folder that groups similar moments across matches.</li>
+<li class="rv"><strong>A plan to follow.</strong> A weekly training plan, a streak, and a countdown to your next competition.</li>
+<li class="rv"><strong>A coach in the loop.</strong> Connect your own coach, or a pro coach through the app, to review your matches with you.</li>
 </ul>
+</section>
 
+<section class="sec" id="which-matches" data-short="Which matches">
 <h2>Which matches can you analyze?</h2>
 <p><strong>Any match you can film.</strong></p>
-<ul>
-<li><strong>Competition and training.</strong> A tournament final or a hard round at your academy.</li>
-<li><strong>Gi and No-Gi.</strong> The engine knows which one it is watching and does not invent lapel or collar grips in a No-Gi match.</li>
-<li><strong>IBJJF and other rulesets, like AJP and ADCC.</strong> The score follows the referee when it is visible, and the events are found either way.</li>
-<li><strong>Any footage.</strong> Official streams, or a phone filming from the stands, cropped or partly blocked.</li>
+<ul class="cards">
+<li class="rv"><strong>Competition and training.</strong> A tournament final or a hard round at your academy.</li>
+<li class="rv"><strong>Gi and No-Gi.</strong> The engine knows which one it is watching and does not invent lapel or collar grips in a No-Gi match.</li>
+<li class="rv"><strong>IBJJF and other rulesets, like AJP and ADCC.</strong> The score follows the referee when it is visible, and the events are found either way.</li>
+<li class="rv"><strong>Any footage.</strong> Official streams, or a phone filming from the stands, cropped or partly blocked.</li>
 </ul>
+<div class="app rv">
 <p>Matsense marks what <strong>both</strong> athletes did. If your opponent passes your guard, you see that moment too, because that is exactly what you need to learn from.</p>
+<div class="app__screen" aria-hidden="true">
+<span class="app__title">Key moments</span>
+<div class="mo"><time>0:48</time><i style="--c:var(--ev-sweepatt)"></i>Sweep attempt<span>You</span></div>
+<div class="mo is-on"><time>2:15</time><i style="--c:var(--ev-guardpass)"></i>Guard pass<span>Opponent</span></div>
+<div class="mo"><time>3:40</time><i style="--c:var(--ev-subatt)"></i>Submission attempt<span>You</span></div>
+<div class="task">Task: keep the knee shield frame</div>
+</div>
+</div>
+</section>
 
-</article>
-<nav class="related" aria-label="Keep reading">
-<a href="/how-to-analyze-bjj-matches/">How to analyze a BJJ match: the almosts and the moments that decided it &rarr;</a>
+<section class="sec" id="questions" data-short="Questions">
+<h2>Questions people ask</h2>
+<div class="faq">
+<details><summary><h3>How does Matsense recognize what happens in a BJJ match?</h3></summary><p>A video AI model watches the whole match against a detailed rulebook of more than 35 event types written by black belt world champion Amit Burshtein. Every event is timestamped, typed and attributed to an athlete, a second high-resolution pass checks how the match ended, and every correction made by expert reviewers is fed back into future analyses.</p></details>
+<details><summary><h3>What problem does Matsense solve?</h3></summary><p>Rewatching a full match to find the few moments that matter takes time, and memory of a match is unreliable. Matsense finds those moments for you, so your review starts with the critical exchanges and ends with clear things to train.</p></details>
+<details><summary><h3>Which matches can I analyze?</h3></summary><p>Any BJJ match: competition and training rolls, Gi and No-Gi, IBJJF and other rulesets like AJP and ADCC, from an official stream or a phone filming from the stands.</p></details>
+</div>
+</section>
+
+<nav class="related" aria-label="Keep reading"><span class="related__label">Keep reading</span>
+<a href="/how-to-analyze-bjj-matches/">How to analyze a BJJ match: the almosts and the moments that decided it</a>
+<a href="/learn-from-a-bjj-loss/">What to do after losing a BJJ match</a>
 </nav>
-<section class="panel">
+</article>
+</main>
+<section class="final"><div class="final__panel">
 <h2>Your next match starts with the right breakdown.</h2>
 <p>Upload a match, and Matsense marks every moment that mattered.</p>
-<a class="cta" href="/#join">Sign up for early access</a>
-</section>
-</main>
+<a class="join join--big" href="/#join">Sign up for early access</a>
+</div></section>
 <footer class="foot"><span><b>Matsense</b> &middot; AI match analysis for BJJ</span><a href="mailto:office@matsense.net">office@matsense.net</a></footer>
 </body>
 </html>

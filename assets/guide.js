@@ -184,3 +184,75 @@
     });
   });
 })();
+
+/* Scoreboard, three-second hold and game-plan planner */
+(function () {
+  var page = location.pathname.replace(/[^a-z0-9-]/gi, "") || "home";
+  function track(name, detail) { try { (window.dataLayer = window.dataLayer || []).push({ event: "guide_" + name, guide_page: page, guide_detail: detail || "" }); } catch (e) {} }
+
+  document.querySelectorAll("[data-score]").forEach(function (tool) {
+    var total = 0, log = [];
+    var num = tool.querySelector(".score__num b"), out = tool.querySelector(".score__log");
+    function show() { num.textContent = total; out.textContent = log.length ? log.join(" + ") : "Tap a move to add it"; }
+    tool.querySelectorAll(".pts > li").forEach(function (li) {
+      var n = +li.getAttribute("data-pts"), name = li.querySelector("strong").textContent.split(":")[0];
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "add"; b.textContent = "+" + n + " " + name;
+      b.addEventListener("click", function () {
+        total += n; log.push(n); if (log.length > 8) log.shift();
+        li.classList.add("is-hit"); setTimeout(function () { li.classList.remove("is-hit"); }, 500);
+        show(); track("score", name);
+      });
+      li.appendChild(b);
+    });
+    tool.querySelector(".reset").addEventListener("click", function () { total = 0; log = []; show(); });
+    show();
+  });
+
+  document.querySelectorAll(".hold").forEach(function (tool) {
+    var btn = tool.querySelector(".hold__btn"), arc = tool.querySelector(".hold__arc"), sec = tool.querySelector(".hold__sec"), out = tool.querySelector(".hold__out");
+    var t0 = 0, raf = 0, LEN = 452, NEED = 3000;
+    function frame() {
+      var ms = Math.min(NEED, performance.now() - t0);
+      arc.style.strokeDashoffset = LEN * (1 - ms / NEED);
+      sec.textContent = (ms / 1000).toFixed(1);
+      if (ms >= NEED) { out.textContent = "Held for 3 seconds. The position scores."; out.className = "hold__out is-good"; track("hold", "scored"); return; }
+      raf = requestAnimationFrame(frame);
+    }
+    function down(e) { e.preventDefault(); if (btn.classList.contains("is-down")) return; btn.classList.add("is-down"); out.textContent = ""; out.className = "hold__out"; t0 = performance.now(); raf = requestAnimationFrame(frame); }
+    function up() {
+      if (!btn.classList.contains("is-down")) return;
+      btn.classList.remove("is-down"); cancelAnimationFrame(raf);
+      var ms = performance.now() - t0;
+      if (ms < NEED) { out.textContent = "Let go at " + (ms / 1000).toFixed(1) + " seconds. No points."; track("hold", "early"); }
+      setTimeout(function () { if (!btn.classList.contains("is-down")) { arc.style.strokeDashoffset = LEN; sec.textContent = "0.0"; } }, 1400);
+    }
+    btn.addEventListener("pointerdown", down);
+    ["pointerup", "pointerleave", "pointercancel"].forEach(function (ev) { btn.addEventListener(ev, up); });
+    btn.addEventListener("keydown", function (e) { if ((e.key === " " || e.key === "Enter") && !e.repeat) down(e); });
+    btn.addEventListener("keyup", function (e) { if (e.key === " " || e.key === "Enter") up(); });
+  });
+
+  document.querySelectorAll("[data-plan]").forEach(function (tool) {
+    var key = "ms:" + page + ":" + tool.getAttribute("data-plan");
+    var items = [].slice.call(tool.querySelectorAll(".plan > li"));
+    var saved = {}; try { saved = JSON.parse(localStorage.getItem(key) || "{}") || {}; } catch (e) {}
+    var areas = items.map(function (li, i) {
+      var ta = document.createElement("textarea");
+      ta.id = "plan-" + i; ta.rows = 2; ta.placeholder = "Write yours";
+      ta.setAttribute("aria-label", li.querySelector("strong").textContent.replace(/[.,]\s*$/, "") + ": your plan");
+      ta.value = saved[i] || "";
+      ta.addEventListener("input", function () { saved[i] = ta.value; try { localStorage.setItem(key, JSON.stringify(saved)); } catch (e) {} });
+      li.appendChild(ta);
+      return ta;
+    });
+    var copy = tool.querySelector(".copy-plan");
+    if (copy) copy.addEventListener("click", function () {
+      var text = ["My game plan", ""].concat(items.map(function (li, i) { return li.querySelector("strong").textContent.replace(/[.,]\s*$/, "") + ": " + (areas[i].value || "-"); })).join("\n");
+      var t = copy.textContent;
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () { copy.textContent = "Copied"; setTimeout(function () { copy.textContent = t; }, 1800); track("copy_plan"); }, function () {});
+    });
+    var r = tool.querySelector(".reset");
+    if (r) r.addEventListener("click", function () { areas.forEach(function (a) { a.value = ""; }); saved = {}; try { localStorage.removeItem(key); } catch (e) {} });
+  });
+})();

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <!-- Google tag (Google Analytics) -->
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PMDFW2C8"></script>
@@ -9,6 +9,7 @@
   gtag('js', new Date());
 </script>
 <meta charset="utf-8">
+<script>document.documentElement.className = "js";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>IBJJF Points Explained: How BJJ Scoring Works | Matsense</title>
 <meta name="description" content="IBJJF points explained from a competitor’s point of view: takedowns, sweeps, guard passes, mount and back control, the 3-second rule, advantages, penalties and how ties are decided.">
@@ -25,8 +26,9 @@
 <link rel="apple-touch-icon" href="/icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Instrument+Sans:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/article.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="/assets/guide.css">
+<script src="/assets/guide.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -97,69 +99,128 @@
 </script>
 </head>
 <body>
-<header class="wrap top__row">
+<div class="progress" aria-hidden="true"><i></i></div>
+<header class="top"><div class="wrap top__row">
 <a class="brand" href="/" aria-label="Matsense home"><svg width="34" height="34" viewBox="0 0 60 60" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6H10C7.8 6 6 7.8 6 10V20M40 6H50C52.2 6 54 7.8 54 10V20M6 40V50C6 52.2 7.8 54 10 54H20M54 40V50C54 52.2 52.2 54 50 54H40" stroke="currentColor" stroke-width="4"/><path d="M30 19A11 11 0 0 0 19 30" stroke="currentColor" stroke-width="3.5"/><path d="M30 41A11 11 0 0 0 41 30" stroke="var(--mark)" stroke-width="3.5"/><circle cx="30" cy="30" r="4" fill="var(--mark)"/></svg><span class="brand__name">Matsense</span></a>
-<a class="cta" href="/#join">Sign up for early access</a>
-</header>
-<main>
+<a class="join" href="/#join">Sign up<span class="long">&nbsp;for early access</span></a>
+</div></header>
+<main class="guide">
+<nav class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ol>
+<li><a href="#values"><span>01</span>Point values</a></li>
+<li><a href="#three-seconds"><span>02</span>3 seconds</a></li>
+<li><a href="#advantages"><span>03</span>Advantages</a></li>
+<li><a href="#penalties"><span>04</span>Penalties</a></li>
+<li><a href="#tiebreak"><span>05</span>Who wins</a></li>
+<li><a href="#strategy"><span>06</span>Strategy</a></li>
+<li><a href="#video"><span>07</span>From video</a></li>
+<li><a href="#questions"><span>08</span>Questions</a></li>
+</ol></nav>
 <article>
 <p class="crumbs"><a href="/">Matsense</a> / IBJJF points explained</p>
 <h1>IBJJF points explained: how a BJJ match is scored</h1>
+<div class="meta"><span class="pill"><b>4</b> min read</span><span class="pill"><b>8</b> sections</span></div>
+<div class="answer">
+<span class="label">The short answer</span>
 <p class="lead">In an IBJJF match you score points by reaching a dominant position, or by making a point-scoring move, and stabilizing it for three seconds: 2 points for a takedown, a sweep or knee on belly, 3 points for a guard pass, and 4 points for mount or back control. A submission ends the match whatever the score. If the points are tied, advantages decide, then penalties, then the referee.</p>
 <p class="byline">By the Matsense team, reviewed by black belt world champion Amit Burshtein</p>
+</div>
 
+<section class="sec" id="values" data-short="Point values">
 <h2>The IBJJF point values</h2>
-<ul>
-<li><strong>Takedown: 2 points.</strong> Taking your opponent down from standing and establishing the top position.</li>
-<li><strong>Sweep: 2 points.</strong> Starting from guard, reversing the position and ending up on top.</li>
-<li><strong>Knee on belly: 2 points.</strong> Knee on the opponent&rsquo;s belly or chest, with the other leg posted, from the top.</li>
-<li><strong>Guard pass: 3 points.</strong> Getting past the opponent&rsquo;s legs and hip line and establishing control in side control or north-south.</li>
-<li><strong>Mount: 4 points.</strong> Sitting on the opponent&rsquo;s torso, facing their head. Mount from the back counts too.</li>
-<li><strong>Back control: 4 points.</strong> Behind the opponent with both hooks in.</li>
+<div class="tool rv" data-score>
+<div class="tool__head"><span class="label">Scoreboard</span><span class="tool__hint">Add moves to see how points stack up</span></div>
+<div class="score__board"><span class="score__num"><b>0</b><small>points</small></span><span class="score__log" aria-live="polite"></span></div>
+<ul class="pts">
+<li data-pts="2"><strong>Takedown: 2 points.</strong> Taking your opponent down from standing and establishing the top position.</li>
+<li data-pts="2"><strong>Sweep: 2 points.</strong> Starting from guard, reversing the position and ending up on top.</li>
+<li data-pts="2"><strong>Knee on belly: 2 points.</strong> Knee on the opponent&rsquo;s belly or chest, with the other leg posted, from the top.</li>
+<li data-pts="3"><strong>Guard pass: 3 points.</strong> Getting past the opponent&rsquo;s legs and hip line and establishing control in side control or north-south.</li>
+<li data-pts="4"><strong>Mount: 4 points.</strong> Sitting on the opponent&rsquo;s torso, facing their head. Mount from the back counts too.</li>
+<li data-pts="4"><strong>Back control: 4 points.</strong> Behind the opponent with both hooks in.</li>
 </ul>
+<div class="tool__head" style="margin:12px 0 0;justify-content:flex-end"><button class="reset" type="button">Clear</button></div>
+</div>
+</section>
 
+<section class="sec" id="three-seconds" data-short="3 seconds">
 <h2>The 3-second rule</h2>
 <p>A position scores only when it is held for three seconds. If you pass the guard and your opponent recovers guard after two seconds, the pass scores nothing. That is why experienced competitors stabilize first and only then move on to the next position or the submission.</p>
+<div class="tool hold rv" aria-label="Try the three-second rule">
+<div class="tool__head" style="width:100%;margin:0"><span class="label">Try the 3-second rule</span><span class="tool__hint">Press and hold</span></div>
+<div class="hold__ring"><svg viewBox="0 0 168 168" aria-hidden="true"><circle class="hold__track" cx="84" cy="84" r="72"/><circle class="hold__arc" cx="84" cy="84" r="72"/></svg><span class="hold__sec" aria-hidden="true">0.0</span></div>
+<button class="hold__btn" type="button">Hold the position</button>
+<p class="hold__out" aria-live="polite"></p>
+</div>
 <p>You can also score points simultaneously, if you make a point-scoring move and stabilize it for at least three seconds. Pass the guard straight to mount, and you get 3 points for the pass and 4 for the mount.</p>
 <p>Points are given for positions, not for effort. A beautiful attempt that does not finish in a scoring position held for three seconds gives no points. It may give an advantage, if the position would have scored but was not held long enough.</p>
+</section>
 
+<section class="sec" id="advantages" data-short="Advantages">
 <h2>Advantages: the almosts on the scoreboard</h2>
 <p>An advantage is given when an athlete reaches a point-scoring position and does not hold it for three seconds, or puts the opponent in real danger of a submission without completing it. Advantages are not added to the points. They only decide the match when the points are tied.</p>
-<div class="callout"><p>Advantages are the official version of the almosts. A match you lost on advantages is a match where one almost, finished, would have changed the result. Read more in <a href="/how-to-analyze-bjj-matches/">How to analyze a BJJ match</a>.</p></div>
+<div class="note rv"><p>Advantages are the official version of the almosts. A match you lost on advantages is a match where one almost, finished, would have changed the result. Read more in <a href="/how-to-analyze-bjj-matches/">How to analyze a BJJ match</a>.</p></div>
+</section>
 
+<section class="sec" id="penalties" data-short="Penalties">
 <h2>Penalties</h2>
 <p>Penalties are given for stalling, for leaving the mat to escape a position, and for other rule violations. They escalate: the first is just a penalty, the second gives your opponent an advantage, the third gives them 2 points, and the fourth disqualifies you. Some violations, like an illegal technique for your belt, disqualify you at once.</p>
+<ol class="ladder rv" aria-hidden="true"><li style="--n:0"><b>1st</b>Penalty</li><li style="--n:1"><b>2nd</b>Advantage to them</li><li style="--n:2"><b>3rd</b>2 points to them</li><li style="--n:3"><b>4th</b>Disqualified</li></ol>
+</section>
 
+<section class="sec" id="tiebreak" data-short="Who wins">
 <h2>How a match without a submission is decided</h2>
-<ol>
-<li><strong>Points.</strong> The athlete with more points wins.</li>
-<li><strong>Advantages.</strong> If the points are tied, more advantages wins.</li>
-<li><strong>Penalties.</strong> If both are tied, fewer penalties wins.</li>
-<li><strong>Referee decision.</strong> If everything is tied, the referee chooses the athlete they think deserves the win, by their own judgement.</li>
+<ol class="steps">
+<li class="rv"><strong>Points.</strong> The athlete with more points wins.</li>
+<li class="rv"><strong>Advantages.</strong> If the points are tied, more advantages wins.</li>
+<li class="rv"><strong>Penalties.</strong> If both are tied, fewer penalties wins.</li>
+<li class="rv"><strong>Referee decision.</strong> If everything is tied, the referee chooses the athlete they think deserves the win, by their own judgement.</li>
 </ol>
+</section>
 
+<section class="sec" id="strategy" data-short="Strategy">
 <h2>How competitors use the scoring rules</h2>
-<ul>
-<li><strong>Know the score at every moment.</strong> When you are ahead late in a match, safe control matters more than a risky attack.</li>
-<li><strong>Stabilize before you move on.</strong> Three seconds on top is worth more than a fast transition that scores nothing.</li>
-<li><strong>Count the advantages in close matches.</strong> With the points tied, one more near pass or real submission threat can decide it.</li>
+<ul class="cards cards--3">
+<li class="rv"><strong>Know the score at every moment.</strong> When you are ahead late in a match, safe control matters more than a risky attack.</li>
+<li class="rv"><strong>Stabilize before you move on.</strong> Three seconds on top is worth more than a fast transition that scores nothing.</li>
+<li class="rv"><strong>Count the advantages in close matches.</strong> With the points tied, one more near pass or real submission threat can decide it.</li>
 </ul>
+</section>
 
+<section class="sec" id="video" data-short="From video">
 <h2>Reading the score from a match video</h2>
+<div class="app rv">
 <p>When you review a match, the scoreboard alone does not show where the points came from. Matsense marks every scoring move, every attempt and every turning point on the match timeline, for both athletes. The score follows the referee when it is visible, and it works for IBJJF and other rulesets like AJP and ADCC.</p>
+<div class="app__screen" aria-hidden="true">
+<span class="app__title">Key moments</span>
+<div class="mo"><time>0:48</time><i style="--c:var(--ev-sweepatt)"></i>Sweep attempt<span>You</span></div>
+<div class="mo is-on"><time>2:15</time><i style="--c:var(--ev-guardpass)"></i>Guard pass<span>Opponent</span></div>
+<div class="mo"><time>3:40</time><i style="--c:var(--ev-subatt)"></i>Submission attempt<span>You</span></div>
+<div class="task">Task: keep the knee shield frame</div>
+</div>
+</div>
+</section>
 
-</article>
-<nav class="related" aria-label="Keep reading">
-<a href="/how-to-analyze-bjj-matches/">How to analyze a BJJ match: the almosts and the moments that decided it &rarr;</a>
-<a href="/bjj-competition-game-plan/">How to build a BJJ competition game plan &rarr;</a>
-<a href="/how-it-works/">How Matsense analyzes a BJJ match &rarr;</a>
+<section class="sec" id="questions" data-short="Questions">
+<h2>Questions people ask</h2>
+<div class="faq">
+<details><summary><h3>How many points is each position worth in IBJJF?</h3></summary><p>A takedown, a sweep and knee on belly are worth 2 points, a guard pass is worth 3 points, and mount and back control are worth 4 points. A position scores only when it is stabilized for three seconds.</p></details>
+<details><summary><h3>What is an advantage in IBJJF?</h3></summary><p>An advantage is given when an athlete reaches a point-scoring position and does not hold it for three seconds, or puts the opponent in real danger of a submission without completing it. Advantages are not added to the points. They only decide the match when the points are tied.</p></details>
+<details><summary><h3>How is an IBJJF match decided without a submission?</h3></summary><p>The athlete with more points wins. If the points are tied, more advantages wins. If both are tied, fewer penalties wins. If everything is tied, the referee decides who deserves the win.</p></details>
+</div>
+</section>
+
+<nav class="related" aria-label="Keep reading"><span class="related__label">Keep reading</span>
+<a href="/how-to-analyze-bjj-matches/">How to analyze a BJJ match: the almosts and the moments that decided it</a>
+<a href="/bjj-competition-game-plan/">How to build a BJJ competition game plan</a>
+<a href="/how-it-works/">How Matsense analyzes a BJJ match</a>
 </nav>
-<section class="panel">
+</article>
+</main>
+<section class="final"><div class="final__panel">
 <h2>Your next match starts with the right breakdown.</h2>
 <p>Upload a match, and Matsense marks every moment that mattered.</p>
-<a class="cta" href="/#join">Sign up for early access</a>
-</section>
-</main>
+<a class="join join--big" href="/#join">Sign up for early access</a>
+</div></section>
 <footer class="foot"><span><b>Matsense</b> &middot; AI match analysis for BJJ</span><a href="mailto:office@matsense.net">office@matsense.net</a></footer>
 </body>
 </html>

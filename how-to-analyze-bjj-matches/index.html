@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <!-- Google tag (Google Analytics) -->
 <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-PMDFW2C8"></script>
@@ -9,6 +9,7 @@
   gtag('js', new Date());
 </script>
 <meta charset="utf-8">
+<script>document.documentElement.className = "js";</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>How to Analyze a BJJ Match: The Almosts and the Moments That Decided It | Matsense</title>
 <meta name="description" content="How to analyze a BJJ match: focus on the almosts that could have changed it and the moments that decided it, then turn every conclusion into training.">
@@ -25,8 +26,9 @@
 <link rel="apple-touch-icon" href="/icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Instrument+Sans:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/article.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="/assets/guide.css">
+<script src="/assets/guide.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -97,80 +99,122 @@
 </script>
 </head>
 <body>
-<header class="wrap top__row">
+<div class="progress" aria-hidden="true"><i></i></div>
+<header class="top"><div class="wrap top__row">
 <a class="brand" href="/" aria-label="Matsense home"><svg width="34" height="34" viewBox="0 0 60 60" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6H10C7.8 6 6 7.8 6 10V20M40 6H50C52.2 6 54 7.8 54 10V20M6 40V50C6 52.2 7.8 54 10 54H20M54 40V50C54 52.2 52.2 54 50 54H40" stroke="currentColor" stroke-width="4"/><path d="M30 19A11 11 0 0 0 19 30" stroke="currentColor" stroke-width="3.5"/><path d="M30 41A11 11 0 0 0 41 30" stroke="var(--mark)" stroke-width="3.5"/><circle cx="30" cy="30" r="4" fill="var(--mark)"/></svg><span class="brand__name">Matsense</span></a>
-<a class="cta" href="/#join">Sign up for early access</a>
-</header>
-<main>
+<a class="join" href="/#join">Sign up<span class="long">&nbsp;for early access</span></a>
+</div></header>
+<main class="guide">
+<nav class="toc" aria-label="On this page"><p class="toc__title">On this page</p><ol>
+<li><a href="#almosts"><span>01</span>The almosts</a></li>
+<li><a href="#decided"><span>02</span>Decided</a></li>
+<li><a href="#review"><span>03</span>Review</a></li>
+<li><a href="#to-the-mat"><span>04</span>To the mat</a></li>
+<li><a href="#questions"><span>05</span>Questions</a></li>
+</ol></nav>
 <article>
 <p class="crumbs"><a href="/">Matsense</a> / How to analyze a BJJ match</p>
 <h1>How to analyze a BJJ match</h1>
+<div class="meta"><span class="pill"><b>4</b> min read</span><span class="pill"><b>5</b> sections</span></div>
+<div class="answer">
+<span class="label">The short answer</span>
 <p class="lead">To analyze a BJJ match, focus on two kinds of moments: the almosts that could have changed the match, and the moments that actually decided it. The scoreboard shows only part of that story. The submission you almost finished, the defense that almost saved you, and the moment your opponent got past your guard frames are what you need to study.</p>
 <p class="byline">By the Matsense team, built and tested by IBJJF world champions</p>
+</div>
 
+<section class="sec" id="almosts" data-short="The almosts">
 <h2>Focus on the almosts</h2>
 <p>The scoreboard sums up what happened. The <strong>almosts</strong> on top of it are what tell you what to train.</p>
 <p>An almost is a moment where the match nearly went another way. Those moments show the exact gap between where your game is and where it needs to be, and they are easy to miss because they do not appear on the scoreboard.</p>
-<h3>Offensive almosts</h3>
-<ul>
-<li>The submission that could have ended it all, and slipped away.</li>
-<li>The guard pass that was almost completed before they recovered.</li>
-<li>The sweep that almost went through, and would have won the match.</li>
-<li>The turning point that was missed: a moment that could have flipped the match and did not.</li>
-</ul>
-<p>For each one, ask: <strong>what was missing to finish it?</strong> A grip, an angle, timing, or the step before.</p>
-<h3>Defensive almosts</h3>
-<ul>
-<li>The pass you tried to stop and could not.</li>
-<li>The submission you defended for a while and then tapped to.</li>
-<li>The escape you started and did not finish.</li>
-</ul>
-<p>For each one, ask: <strong>what could I do differently?</strong> Usually the problem is one or two steps before the moment you remember.</p>
-<div class="callout"><p>Matsense marks these moments for you: submission attempts, near passes, sweep attempts, back exposure threats and other attempts, for both athletes, so none of the almosts get lost in a full rewatch.</p></div>
+<div class="split">
+<div class="rv"><h3>Offensive almosts</h3><ul><li>The submission that could have ended it all, and slipped away.</li><li>The guard pass that was almost completed before they recovered.</li><li>The sweep that almost went through, and would have won the match.</li><li>The turning point that was missed: a moment that could have flipped the match and did not.</li></ul><p>For each one, ask: <strong>what was missing to finish it?</strong> A grip, an angle, timing, or the step before.</p></div>
+<div class="rv"><h3>Defensive almosts</h3><ul><li>The pass you tried to stop and could not.</li><li>The submission you defended for a while and then tapped to.</li><li>The escape you started and did not finish.</li></ul><p>For each one, ask: <strong>what could I do differently?</strong> Usually the problem is one or two steps before the moment you remember.</p></div>
+</div>
+<div class="app rv">
+<p>Matsense marks these moments for you: submission attempts, near passes, sweep attempts, back exposure threats and other attempts, for both athletes, so none of the almosts get lost in a full rewatch.</p>
+<div class="app__screen" aria-hidden="true">
+<span class="app__title">Key moments</span>
+<div class="mo"><time>0:48</time><i style="--c:var(--ev-sweepatt)"></i>Sweep attempt<span>You</span></div>
+<div class="mo is-on"><time>2:15</time><i style="--c:var(--ev-guardpass)"></i>Guard pass<span>Opponent</span></div>
+<div class="mo"><time>3:40</time><i style="--c:var(--ev-subatt)"></i>Submission attempt<span>You</span></div>
+<div class="task">Task: keep the knee shield frame</div>
+</div>
+</div>
+</section>
 
+<section class="sec" id="decided" data-short="Decided">
 <h2>The moments that decided the match</h2>
 <p>At the same time, study the moments where the move did land. They show what actually decided the match, for you or against you.</p>
-<ul>
-<li>An athlete broke through the guard frames.</li>
-<li>A sweep or reversal that turned the position around.</li>
-<li>A significant score that changed the match.</li>
-<li>A submission that was caught.</li>
+<ul class="marks">
+<li class="rv" style="--c:var(--ev-guardpass)">An athlete broke through the guard frames.</li>
+<li class="rv" style="--c:var(--ev-sweepatt)">A sweep or reversal that turned the position around.</li>
+<li class="rv" style="--c:var(--ev-takedown)">A significant score that changed the match.</li>
+<li class="rv" style="--c:var(--ev-subatt)">A submission that was caught.</li>
 </ul>
-<p>For each one, ask: <strong>what made it work, and what came right before?</strong> The answer is often a grip or a position that started earlier than the moment itself.</p>
+<div class="note note--calm rv"><p>For each one, ask: <strong>what made it work, and what came right before?</strong> The answer is often a grip or a position that started earlier than the moment itself.</p></div>
+</section>
 
+<section class="sec" id="review" data-short="Review">
 <h2>A simple way to review a match</h2>
-<ol>
-<li><strong>Look at the turning points first.</strong> The few moments that decided the match.</li>
-<li><strong>Go through every almost.</strong> Yours and your opponent&rsquo;s.</li>
-<li><strong>Watch each one twice.</strong> Once at normal speed, once slowly from a few seconds before it started.</li>
-<li><strong>Write one conclusion per moment.</strong> Short and specific: what happened, and what you would do differently.</li>
-<li><strong>Look for patterns.</strong> The same almost across several matches is your top priority.</li>
+<div class="tool rv" data-check="review">
+<div class="tool__head"><span class="label">Your review, step by step</span><span class="count"><b>0</b>/5</span></div>
+<div class="meter" aria-hidden="true"><i></i></div>
+<ol class="check">
+<li><label class="tick"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Look at the turning points first.</strong> The few moments that decided the match.</span></label></li>
+<li><label class="tick"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Go through every almost.</strong> Yours and your opponent&rsquo;s.</span></label></li>
+<li><label class="tick"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Watch each one twice.</strong> Once at normal speed, once slowly from a few seconds before it started.</span></label></li>
+<li><label class="tick"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Write one conclusion per moment.</strong> Short and specific: what happened, and what you would do differently.</span></label></li>
+<li><label class="tick"><input type="checkbox"><span class="box"><svg width="14" height="14" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5 8 14.5 16 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><strong>Look for patterns.</strong> The same almost across several matches is your top priority.</span></label></li>
 </ol>
+<div class="tool__head" style="margin:12px 0 0;justify-content:flex-end"><button class="reset" type="button">Clear</button></div>
+</div>
+</section>
 
+<section class="sec" id="to-the-mat" data-short="To the mat">
 <h2>How to take your conclusions from the match to the mat</h2>
 <p>Analysis only matters if it changes how you train. The way to make it stick:</p>
-<ol>
-<li><strong>Turn each conclusion into one task.</strong> Not &ldquo;improve my passing&rdquo;, but &ldquo;win the inside grip before stepping to the leg drag&rdquo;.</li>
-<li><strong>Drill it from the exact position.</strong> Start where the almost happened, not from neutral.</li>
-<li><strong>Test it in positional sparring.</strong> Rounds that start from that position, against resistance.</li>
-<li><strong>Put it in your weekly plan.</strong> A task to do in a planned time gets done. A note in your phone does not.</li>
-<li><strong>Test it in live training.</strong> Notice the change happening in real time in the training room, and keep track of your progress toward that goal.</li>
-<li><strong>Check it in the next match.</strong> Did the same almost come up again, and did it finish this time?</li>
+<ol class="steps">
+<li class="rv"><strong>Turn each conclusion into one task.</strong> Not &ldquo;improve my passing&rdquo;, but &ldquo;win the inside grip before stepping to the leg drag&rdquo;.</li>
+<li class="rv"><strong>Drill it from the exact position.</strong> Start where the almost happened, not from neutral.</li>
+<li class="rv"><strong>Test it in positional sparring.</strong> Rounds that start from that position, against resistance.</li>
+<li class="rv"><strong>Put it in your weekly plan.</strong> A task to do in a planned time gets done. A note in your phone does not.</li>
+<li class="rv"><strong>Test it in live training.</strong> Notice the change happening in real time in the training room, and keep track of your progress toward that goal.</li>
+<li class="rv"><strong>Check it in the next match.</strong> Did the same almost come up again, and did it finish this time?</li>
 </ol>
+<div class="app rv">
 <p>In Matsense, each insight becomes a task in your library, and can be sorted into folders that collect moments from different matches. The tasks go into a weekly training plan with a streak and a countdown to your next competition, and you can bring your coach in to review.</p>
+<div class="app__screen" aria-hidden="true">
+<span class="app__title">Key moments</span>
+<div class="mo"><time>0:48</time><i style="--c:var(--ev-sweepatt)"></i>Sweep attempt<span>You</span></div>
+<div class="mo is-on"><time>2:15</time><i style="--c:var(--ev-guardpass)"></i>Guard pass<span>Opponent</span></div>
+<div class="mo"><time>3:40</time><i style="--c:var(--ev-subatt)"></i>Submission attempt<span>You</span></div>
+<div class="task">Task: keep the knee shield frame</div>
+</div>
+</div>
+</section>
 
-</article>
-<nav class="related" aria-label="Keep reading">
-<a href="/how-it-works/">How Matsense analyzes a BJJ match &rarr;</a>
-<a href="/ibjjf-points-explained/">IBJJF points explained: how a BJJ match is scored &rarr;</a>
-<a href="/bjj-competition-game-plan/">How to build a BJJ competition game plan &rarr;</a>
+<section class="sec" id="questions" data-short="Questions">
+<h2>Questions people ask</h2>
+<div class="faq">
+<details><summary><h3>How do you analyze a BJJ match?</h3></summary><p>Focus on two kinds of moments: the almosts that could have changed the match, and the moments that actually decided it. Look at the turning points first, go through every almost, watch each one twice, write one conclusion per moment, and look for patterns across matches.</p></details>
+<details><summary><h3>What is an almost in a BJJ match?</h3></summary><p>An almost is a moment where the match nearly went another way: a submission that slipped away, a guard pass that was almost completed, a sweep that almost went through. Those moments show the exact gap between where your game is and where it needs to be, and they are easy to miss because they do not appear on the scoreboard.</p></details>
+<details><summary><h3>How do I take conclusions from a match analysis to training?</h3></summary><p>Turn each conclusion into one specific task, drill it from the exact position, test it in positional sparring, put it in your weekly plan, test it in live training, and check it in the next match.</p></details>
+</div>
+</section>
+
+<nav class="related" aria-label="Keep reading"><span class="related__label">Keep reading</span>
+<a href="/how-it-works/">How Matsense analyzes a BJJ match</a>
+<a href="/ibjjf-points-explained/">IBJJF points explained: how a BJJ match is scored</a>
+<a href="/bjj-competition-game-plan/">How to build a BJJ competition game plan</a>
+<a href="/learn-from-a-bjj-loss/">What to do after losing a BJJ match</a>
 </nav>
-<section class="panel">
+</article>
+</main>
+<section class="final"><div class="final__panel">
 <h2>Your next match starts with the right breakdown.</h2>
 <p>Upload a match, and Matsense marks every moment that mattered.</p>
-<a class="cta" href="/#join">Sign up for early access</a>
-</section>
-</main>
+<a class="join join--big" href="/#join">Sign up for early access</a>
+</div></section>
 <footer class="foot"><span><b>Matsense</b> &middot; AI match analysis for BJJ</span><a href="mailto:office@matsense.net">office@matsense.net</a></footer>
 </body>
 </html>
