@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://matsense.net/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-11</lastmod>
   </url>
   <url>
     <loc>https://matsense.net/how-it-works/</loc>
@@ -19,5 +19,17 @@
   <url>
     <loc>https://matsense.net/bjj-competition-game-plan/</loc>
     <lastmod>2026-11-10</lastmod>
+  </url>
+  <url>
+    <loc>https://matsense.net/how-to-film-bjj-rolls/</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://matsense.net/learn-from-a-bjj-loss/</loc>
+    <lastmod>2026-11-11</lastmod>
+  </url>
+  <url>
+    <loc>https://matsense.net/scout-bjj-opponents/</loc>
+    <lastmod>2026-11-11</lastmod>
   </url>
 </urlset>
