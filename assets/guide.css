@@ -1,4 +1,4 @@
-/* Matsense interactive guide pages. Tokens match the landing page (index.html); see DESIGN.md.
+/* GrappleMind interactive guide pages. Tokens match the landing page (index.html); see DESIGN.md.
    Everything reads without JavaScript; guide.js only adds state (checks, pickers, the replay strip). */
 :root {
   color-scheme: dark;

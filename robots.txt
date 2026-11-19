@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://matsense.net/sitemap.xml
+Sitemap: https://grapplemind.net/sitemap.xml

@@ -1,18 +1,18 @@
-# Matsense
+# GrappleMind
 
-> Matsense is an AI match analysis app for Brazilian Jiu-Jitsu (BJJ). You upload a video of a match, from competition or training, Gi or No-Gi, and the AI marks every guard pass, sweep, takedown, submission attempt and turning point, for both athletes. Each insight becomes a training task, and the app builds a weekly training plan with a streak and a countdown to your next competition. Matsense is built and tested by IBJJF and UWW world champions, and its analysis rulebook of more than 35 event types was written by black belt world champion Amit Burshtein. It is in early access.
+> GrappleMind is an AI match analysis app for Brazilian Jiu-Jitsu (BJJ). You upload a video of a match, from competition or training, Gi or No-Gi, and the AI marks every guard pass, sweep, takedown, submission attempt and turning point, for both athletes. Each insight becomes a training task, and the app builds a weekly training plan with a streak and a countdown to your next competition. GrappleMind is built and tested by IBJJF and UWW world champions, and its analysis rulebook of more than 35 event types was written by black belt world champion Amit Burshtein. It is in early access.
 
 ## Guides
 
-- [How Matsense analyzes a BJJ match](https://matsense.net/how-it-works/): how the AI recognizes positions and transitions, timestamps every event, takes a second look at the finish, and learns from expert corrections.
-- [How to analyze a BJJ match](https://matsense.net/how-to-analyze-bjj-matches/): focus on the almosts that could have changed the match and the moments that decided it, then turn every conclusion into training.
-- [IBJJF points explained](https://matsense.net/ibjjf-points-explained/): IBJJF point values, the 3-second rule, advantages, penalties and how a match without a submission is decided.
-- [How to build a BJJ competition game plan](https://matsense.net/bjj-competition-game-plan/): build a game plan from your own matches and train it in the weeks before a tournament.
-- [How to film your BJJ rolls](https://matsense.net/how-to-film-bjj-rolls/): phone setup, camera angle, filming etiquette, and what to do with the footage.
-- [What to do after losing a BJJ match](https://matsense.net/learn-from-a-bjj-loss/): rewatch the loss, find why it happened, and turn it into a training plan.
-- [How to scout a BJJ opponent](https://matsense.net/scout-bjj-opponents/): find their matches, look for patterns, and prepare small adjustments to your game plan.
+- [How GrappleMind analyzes a BJJ match](https://grapplemind.net/how-it-works/): how the AI recognizes positions and transitions, timestamps every event, takes a second look at the finish, and learns from expert corrections.
+- [How to analyze a BJJ match](https://grapplemind.net/how-to-analyze-bjj-matches/): focus on the almosts that could have changed the match and the moments that decided it, then turn every conclusion into training.
+- [IBJJF points explained](https://grapplemind.net/ibjjf-points-explained/): IBJJF point values, the 3-second rule, advantages, penalties and how a match without a submission is decided.
+- [How to build a BJJ competition game plan](https://grapplemind.net/bjj-competition-game-plan/): build a game plan from your own matches and train it in the weeks before a tournament.
+- [How to film your BJJ rolls](https://grapplemind.net/how-to-film-bjj-rolls/): phone setup, camera angle, filming etiquette, and what to do with the footage.
+- [What to do after losing a BJJ match](https://grapplemind.net/learn-from-a-bjj-loss/): rewatch the loss, find why it happened, and turn it into a training plan.
+- [How to scout a BJJ opponent](https://grapplemind.net/scout-bjj-opponents/): find their matches, look for patterns, and prepare small adjustments to your game plan.
 
 ## Product
 
-- [Matsense home and early access](https://matsense.net/): what the app does, FAQ, and sign-up for early access.
-- Contact: office@matsense.net
+- [GrappleMind home and early access](https://grapplemind.net/): what the app does, FAQ, and sign-up for early access.
+- Contact: office@grapplemind.net

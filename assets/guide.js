@@ -1,4 +1,4 @@
-/* Matsense guide pages: small, dependency-free enhancements. The page reads fully without this file. */
+/* GrappleMind guide pages: small, dependency-free enhancements. The page reads fully without this file. */
 (function () {
   var doc = document.documentElement;
   var page = location.pathname.replace(/[^a-z0-9-]/gi, "") || "home";

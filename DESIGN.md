@@ -1,10 +1,10 @@
-# Matsense design system (website and content pages)
+# GrappleMind design system (website and content pages)
 
-Matsense has two related looks. Use the one that matches where the page lives.
+GrappleMind has two related looks. Use the one that matches where the page lives.
 
 | Where | Look | Source of truth |
 | --- | --- | --- |
-| matsense.net (landing page, guides, any public page) | **Site look**: deep navy, blue brand, one warm orange | `index.html` `:root` and `assets/guide.css` in this repo |
+| grapplemind.net (landing page, guides, any public page) | **Site look**: deep navy, blue brand, one warm orange | `index.html` `:root` and `assets/guide.css` in this repo |
 | The app (app.matsense.co) | **Glow**: deep violet night, violet brand, orange streak | `docs/design/design-system/` in the app repo (Matsensebeta): `README.md`, `tokens.json`, `tokens.css` |
 
 Both share: the logo (viewfinder corners, two arcs, a warm centre dot), dark first, everything tappable is a pill or a circle, soft large radii, glow instead of borders to lift the main action, monospace for times, no emoji and no exclamation marks, short literal English. The site borrows the app's **event mark colours** (`ev-*-mark`) for ticks on a match strip, so a guide's diagrams look like the app.
@@ -47,7 +47,7 @@ Every guide uses `assets/guide.css` + `assets/guide.js` (built in November 2026 
    - `[data-picker]` chips that show one item at a time, for "which one is you" lists
    - `.note` (warm) or `.note--calm` (blue) for one key paragraph
 6. One signature tool per page, drawn in the app's language (match strip with event ticks, scouting sheet, camera diagram, journal card).
-7. `.app` card: the "In Matsense" paragraph next to a small mock of the app's key-moments list.
+7. `.app` card: the "In GrappleMind" paragraph next to a small mock of the app's key-moments list.
 8. FAQ as accordions (`.faq details`), Keep reading cards, final panel with one sign-up button.
 
 Rules for guides:
