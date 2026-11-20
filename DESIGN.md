@@ -7,7 +7,7 @@ GrappleMind has two related looks. Use the one that matches where the page lives
 | grapplemind.net (landing page, guides, any public page) | **Site look**: deep navy, blue brand, one warm orange | `index.html` `:root` and `assets/guide.css` in this repo |
 | The app (app.matsense.co) | **Glow**: deep violet night, violet brand, orange streak | `docs/design/design-system/` in the app repo (Matsensebeta): `README.md`, `tokens.json`, `tokens.css` |
 
-Both share: the logo (viewfinder corners, two arcs, a warm centre dot), dark first, everything tappable is a pill or a circle, soft large radii, glow instead of borders to lift the main action, monospace for times, no emoji and no exclamation marks, short literal English. The site borrows the app's **event mark colours** (`ev-*-mark`) for ticks on a match strip, so a guide's diagrams look like the app.
+Both share: the logo (a brain drawn in one line, with one warm dot), dark first, everything tappable is a pill or a circle, soft large radii, glow instead of borders to lift the main action, monospace for times, no emoji and no exclamation marks, short literal English. The site borrows the app's **event mark colours** (`ev-*-mark`) for ticks on a match strip, so a guide's diagrams look like the app.
 
 ## Site tokens
 
