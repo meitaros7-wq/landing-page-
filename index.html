@@ -651,10 +651,9 @@ Built and tested by IBJJF world champions
 <script>
 (() => {
 const SIGNUP_ENDPOINT = null;
-const WAITLIST_ENDPOINT = "https://script.google.com/macros/s/AKfycbw0eqxpmlF88UU0XOZQiXmJMPq1l6-O_tmnvPFETQLZRrY-ob1is7A3keg4ML9p27YG/exec";
-// Each signup also goes to the beta, where the team sees the list and sends invites (Meitar, 2026-11-23).
-// Best effort: the Google Sheet above stays the record, and a failure here never stops a signup.
-const BETA_SIGNUPS_ENDPOINT = "https://beta.grapplemind.net/api/early-access";
+// Signups go to the beta (Meitar, 2026-11-23): it keeps the list, sends the welcome email and tells the team.
+// The Google Apps Script that did this before stopped answering (its address says "page not found").
+const WAITLIST_ENDPOINT = "https://beta.grapplemind.net/api/early-access";
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const $ = (s) => document.querySelector(s);
 const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
@@ -687,7 +686,6 @@ if (WAITLIST_ENDPOINT) {
 planSubmit.disabled = true; planSubmit.textContent = "Signing you up";
 try {
 const payload = JSON.stringify({ name: nameIn.value.trim(), email: email.value.trim(), page: "landing" });
-if (BETA_SIGNUPS_ENDPOINT) fetch(BETA_SIGNUPS_ENDPOINT, { method: "POST", body: payload, mode: "no-cors", keepalive: true }).catch(() => {});
 let ok = false;
 try {
 const r = await fetch(WAITLIST_ENDPOINT, { method: "POST", body: payload, redirect: "follow" });
