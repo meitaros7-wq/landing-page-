@@ -1,4 +1,4 @@
-# GrappleMind
+# GrappleMind (formerly Matsense)
 
 > GrappleMind is an AI match analysis app for Brazilian Jiu-Jitsu (BJJ). You upload a video of a match, from competition or training, Gi or No-Gi, and the AI marks every guard pass, sweep, takedown, submission attempt and turning point, for both athletes. Each insight becomes a training task, and the app builds a weekly training plan with a streak and a countdown to your next competition. GrappleMind is built and tested by IBJJF and UWW world champions, and its analysis rulebook of more than 35 event types was written by black belt world champion Amit Burshtein. It is in early access.
 

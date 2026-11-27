@@ -41,6 +41,7 @@
       "@type": "Organization",
       "@id": "https://grapplemind.net/#org",
       "name": "GrappleMind",
+      "alternateName": "Matsense",
       "url": "https://grapplemind.net/",
       "email": "office@grapplemind.net",
       "logo": "https://grapplemind.net/icon-512.png"
@@ -702,6 +703,7 @@ return fail("The sign-up did not go through. Try again in a minute.");
 }
 }
 $("#earlyDone").textContent = "You're on the list. We'll email you when the beta opens.";
+if (WAITLIST_ENDPOINT && typeof gtag === "function") gtag("event", "generate_lead", { method: "early_access_form" });
 emailErr.hidden = true;
 $("#earlyRow").hidden = true;
 $("#earlyDone").hidden = false;
